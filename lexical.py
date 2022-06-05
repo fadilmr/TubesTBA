@@ -68,7 +68,7 @@ transitionTable['q22', 'a'] = 'q23'
 transitionTable['q23', 's'] = 'q2'
 
 # taho
-transitionTable['q22', 'h'] = 'q24'
+transitionTable['q23', 'h'] = 'q24'
 transitionTable['q24', 'o'] = 'q2'
 
 # bal 
@@ -76,8 +76,16 @@ transitionTable['q0', 'b'] = 'q25'
 transitionTable['q25', 'a'] = 'q26'
 transitionTable['q26', 'l'] = 'q2'
 
+# accept
+transitionTable['q2', ' '] = 'q0'
+transitionTable['q0', '#'] = 'accept'
+transitionTable['q0', ' '] = 'q0'
+transitionTable['q2', '#'] = 'accept'
+
+
 idxChar = 0
 currenToken = ''
+state = 'q0'
 while state != 'accept':
     currenChar = inputString[idxChar]
     currenToken += currenChar
