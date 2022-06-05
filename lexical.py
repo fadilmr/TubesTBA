@@ -59,7 +59,7 @@ transitionTable['q19', 'a'] = 'q20'
 transitionTable['q20', 'n'] = 'q17'
 
 # injam
-transitionTable['q0', 'n'] = 'q21'
+transitionTable['q18', 'n'] = 'q21'
 transitionTable['q21', 'j'] = 'q13'
 
 # tas
