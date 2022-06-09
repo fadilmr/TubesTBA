@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical Analyzer & Parser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+    <div>Type an sample input here</div>
+    <input type="text" id="test-input"/>
+    <button id="submit-button" type="submit" pys-onClick="my_function">OK</button>
+    <div id="test-output"></div>
+  
+  <py-script>
+  from js import console
+  import string
+  def my_function(*args, **kwargs):
+  
+      #print('args:', args)
+      #print('kwargs:', kwargs)
+      
+      text = Element('test-input').element.value
+  
+      #print('text:', text)
+      console.log(f'text: {text}')
+  
+      Element('test-output').element.innerText = text
+  </py-script>
+  
+    </body>
+  </html>

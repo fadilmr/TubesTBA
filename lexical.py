@@ -100,3 +100,4 @@ while state != 'accept':
 
 if state == 'accept':
     print('Semua token di input: ', sentence, ', valid')
+
