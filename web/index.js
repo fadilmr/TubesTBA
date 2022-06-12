@@ -1,6 +1,6 @@
 document.getElementById("button").onclick = function() {
     var sentence = document.getElementById("sentence").value;
-    var tokens = sentence.split(" ");
+    var tokens = input.split(" ");
     tokens.push("EOS");
 
     // symbols definition
@@ -121,8 +121,8 @@ document.getElementById("button").onclick = function() {
     // conclusion:
     console.log('\n')
     if (symbol == 'EOS' && stack.length == 0) {
-        console.log('input string', sentence, 'diterima sesuai grammar')
+        console.log('input string', input, 'diterima sesuai grammar')
     } else {
-        console.log('input string', sentence, 'tidak diterima sesuai grammar')
+        console.log('input string', input, 'tidak diterima sesuai grammar')
     }
 }
